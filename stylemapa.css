@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Merienda:wght@300..900&family=Playwrite+ES+Deco:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+:root {
+    --branco: white;
+    --verde-escuro: rgb(1, 85, 1);
+}
+
+body {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 90px;
+    color: var(--branco);
+}
+
+
+.texto-menu2 {
+    font-family: "Varela Round", sans-serif;
+    font-size: 35px;
+    position: absolute;
+    left: 60px;
+    top: 310px;
+    color: white;
+    text-decoration: none;
+}
+
+
+.container-logo {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.logo {
+    width: 130px;
+    height: 130px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 110px;
+    position: fixed;
+    top: 0;
+    background: var(--verde-escuro);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: 0.75s ease;
+    padding: 0 20px; 
+}
+
+.container {
+    position: fixed;
+    top: 30px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    z-index: 2000;
+}
+
+#checkbox-menu {
+    position: absolute;
+    opacity: 0;
+}
+
+
+.titulo-secundario{
+    font-size: 50px;
+    color: var(--verde-escuro);
+    margin-top: 200px;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+}
+
+footer {
+    font-family: "Poppins", sans-serif;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 5px;
+    width: 100%;
+    background-color: var(--verde-escuro);
+    color: white;
+    margin-top: 20px;
+    position: relative; 
+    z-index: 1000; 
+}
+
+label {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 45px;
+    width: 60px;
+}
+
+label span {
+    position: absolute;
+    margin-top: 10px;
+    display: block;
+    height: 10px;
+    width: 100%;
+    border-radius: 30px;
+    background: #ffffff;
+    transition: 0.25s ease-in-out;
+}
+
+label span:nth-child(1) {
+    top: 0;
+}
+
+label span:nth-child(2) {
+    top: 15px;
+}
+
+label span:nth-child(3) {
+    top: 30px;
+}
+
+#checkbox-menu:checked + label span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 15px;
+    background-color: white;
+}
+
+#checkbox-menu:checked + label span:nth-child(2) {
+    opacity: 0;
+}
+
+#checkbox-menu:checked + label span:nth-child(3) {
+    transform: rotate(45deg);
+    top: 15px;
+    background-color: white;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--verde-escuro);
+    width: 15vw;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -80vw;
+    transition: 0.5s;
+    z-index: 1000;
+}
+
+
+.texto-menu {
+    font-family: "Varela Round", sans-serif;
+    font-size: 35px;
+    position: absolute;
+    left: 60px;
+    top: 150px;
+    color: white;
+    padding-left: 2px;
+}
+
+.texto-menu1 {
+    font-family: "Varela Round", sans-serif;
+    font-size: 35px;
+    position: absolute;
+    left: 60px;
+    top: 230px;
+    color: white;
+}
+
+.localizacao {
+    position: absolute;
+    top: 235px;
+    left: 20px;
+    transform: scale(1.5);
+}
+
+.localizacao:hover {
+    transition: 1s;
+    transform: scale(1.6);
+}
+
+.casinha {
+    position: absolute;
+    top: 150px;
+    left: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.localizacao {
+    position: absolute;
+    top: 235px;
+    left: 20px;
+    transform: scale(1.5);
+}
+
+.sidebar-menu.active {
+    left: 0;
+}
+
+.casinha {
+    position: absolute;
+    top: 150px;
+    left: 20px;
+}
+
+.texto-menu:hover, .casinha:hover, .texto-menu1:hover {
+    transition: 1s;
+    transform: scale(1.1);
+}
+
+.localizacao:hover {
+    transition: 1s;
+    transform: scale(1.6);
+}
+
+#map-container {
+    width: 90%;
+    height: 600px; 
+    margin: 0 auto;
+    justify-content: center;
+
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    margin-top: 70px;
+    border: 3px solid var(--verde-escuro);
+}
+
+.container-buscas {
+    display: flex;
+    margin-top: 50px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.busca {
+    background-color: var(--verde-escuro);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    padding: 100px;
+    border-radius: 35PX;
+    margin: 0 auto;
+    width: calc(50% - 20px);
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.busca h2{
+    font-size: 1.2rem;
+    margin-bottom: 1px;
+    margin-right: 20px;
+    text-align: center; 
+    font-family: "Varela Round", sans-serif;
+    color: var(--branco);
+}
+
+.busca p{
+    margin-top: 0px;
+    text-align: center;
+    color: var(--branco);
+    font-family: "Varela Round", sans-serif;
+}
+
+.busca input,
+.busca select{
+    width: 110%;
+    padding: 20px;
+    margin: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.busca select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("arrow-down.png");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+    background-size: 16px;
+    padding-right: 30px;
+}
+
+.search-button {
+    background-color: #ffffff;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+    margin: auto;
+}
+
+.loja {
+    position: absolute;
+    top: 310px;
+    left: 20px;
+    transform: scale(1.5);
+}
+
+.endereco {
+    padding-top: 10px;
+    font-family: "Varela Round", sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .side-panel {
+        position: relative;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+   }
+
+   .titulo-secundario{
+    font-size: 40px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 150px;
+   }
+
+   .busca h2{
+    margin: 1 auto;
+    margin-bottom: 10px;
+    font-size: 30px;
+   }
+
+   .busca p{
+    font-size: 25px;
+   }
+
+   .busca{
+    flex-direction: column;
+    width: 80%;
+   }
+
+    .texto-menu3{
+        font-size:25px;
+    }
+
+   .sidebar-menu.active {
+    width: 65%;
+}
+
+#map-container{
+  width:80%;
+  height:450px;
+  margin-top:50px;
+}
+    h2{
+    font-size: 25px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    label span1 {
+        width: 100%;
+    }
+
+    .logo {
+        width: 110px;
+        height: 110px;
+        margin-left: 35px;
+    }
+
+    .container-logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body {
+        flex-direction: column;
+    }
+
+}

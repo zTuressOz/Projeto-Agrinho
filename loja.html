@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIDAGRO-LOJA</title>
+    <link rel="stylesheet" href="styleloja.css">
+</head>
+<body>
+    <header>
+        <div class="container-logo">
+            <!--icone de autoria do aluno-->
+            <div class="logo"><img src="icone.png" width="350"></div>
+            <div class="titulo-primario">
+                <h1>CIDAGRO</h1>
+            </div>
+        </div>
+    </header>
+
+    <section class="corpo">
+    <div class="container">
+        <input type="checkbox" id="checkbox-menu" class="checkbox">
+        <label for="checkbox-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
+
+    <nav class="sidebar-menu">
+        <a href="index.html"><img src="inicio.png" alt="inicio" width="35" class="casinha"></a>
+        <a href="index.html" class="texto-menu">INÍCIO</a>
+        <a href="mapa.html"><img src="localizacao.png" alt="mapa" width="35" class="localizacao"></a>
+        <a href="mapa.html" class="texto-menu1">MAPA</a>
+        <a href="loja.html"><img src="loja.png" alt="loja" width="35" class="loja"></a>
+        <a href="loja.html" class="texto-menu2">LOJA</a>
+    </nav>
+
+    <h2>Compre nossos produtos</h2>
+
+    <div class="tab">
+        <button class="ativo"id="organicos-tab" onclick="abrirAba(event, 'conteudo-sementes')">SEMENTES</button>
+        <button id="equipamentos-tab" onclick="abrirAba(event, 'conteudo-equipamentos')">EQUIPAMENTOS</button>
+    </div>
+
+    <div class="container-centralizado">
+        <div class="produtos">
+            <div id="conteudo-sementes" class="conteudo-tab" style="display:block;">
+                <div class="retangulo">
+                    <img src="alface.png" width="400" class="img-produto">
+                    <p class="nome-produto">SEMENTE DE ALFACE</p>
+                    <p class="preço">R$150</p>
+                    <button class="comprar">COMPRAR</button>
+                    <p class="ref-imagem">Imagem com elementos do canvas do autor <br>"pixabay" e editado pelo aluno</p>
+                </div>
+                <div class="retangulo"><img src="tomate.png" width="400" class="img-produto"><p class="ref-imagem">Imagem com elementos do canvas do autor <br>"pixabay" e editado pelo aluno</p><p class="nome-produto">SEMENTE DE TOMATE</p><p class="preço">R$150</p><button class="comprar">COMPRAR</button></div>
+                <div class="retangulo"><img src="rabanete.png" width="400" class="img-produto"><p class="ref-imagem">Imagem com elementos do canvas do autor <br>"pixabay" e editado pelo aluno</p><p class="nome-produto">SEMENTE DE RABANETE</p><p class="preço">R$120</p><button class="comprar">COMPRAR</button></div>
+                <div class="retangulo"><img src="cebola.png" width="400" class="img-produto"><p class="ref-imagem">Imagem com elementos do canvas do autor <br>"pixabay" e editado pelo aluno</p><p class="nome-produto">SEMENTE DE CEBOLA</p><p class="preço">R$130</p><button class="comprar">COMPRAR</button></div>
+                <div class="retangulo"><img src="cenoura.png" width="400" class="img-produto"><p class="ref-imagem">Imagem com elementos do canvas do autor <br>"pixabay" e editado pelo aluno</p><p class="nome-produto">SEMENTE DE CENOURA</p><p class="preço">R$140</p><button class="comprar">COMPRAR</button></div>
+
+</div>
+            <div id="conteudo-equipamentos" class="conteudo-tab" style="display:none;">
+                <div class="retangulo"><img src="pa-de-jardinagem.png" width="400" class="img-produto"> <a href="https://pt.lovepik.com/images/png-arbor-day.html" class="ref-imagem">Dia Da Árvore Png vectors by Lovepik.com</a><p class="preço">R$28</p><p class="nome-produto">PÁ DE JARDIM</p><button class="comprar">COMPRAR</button></div>
+                <div class="retangulo"><p class="nome-produto">ENXADA</p><img src="enxada.png" width="400" class="img-produto"><p" class="ref-imagem">Imagem retirada do canvas autora Mikaella Beratio</p><p class="nome-produto">GARFO DE JARDIM</p><p class="preço">R$29</p><button class="comprar">COMPRAR</button></div>
+                <div class="retangulo"><p class="nome-produto">ENXADA</p><img src="regador.png" width="400" class="img-produto"><p" class="ref-imagem">Imagem retirada do canvas autor Irasutoya de いらすとや</p><p class="nome-produto">ENXADA</p><p class="preço">R$40</p><button class="comprar">COMPRAR</button></div>
+                <div class="retangulo"><p class="nome-produto">TESOURA DE PODA</p><img src="tesoura-de-poda.png" width="400" class="img-produto"><p" class="ref-imagem">Imagem retirada do canvas autor Irasutoya de いらすとや</p><p class="preço">R$30</p><button class="comprar">COMPRAR</button></div>
+                <div class="retangulo"><p class="nome-produto">GARFO DE JARDIM</p><img src="garfo-de-jardim.png" width="400" class="img-produto"><a href="https://www.pngegg.com/pt/png-keekl" class="ref-imagem">Atribuição imagem</a><p class="nome-produto">GARFO DE JARDIM</p><p class="preço">R$25</p><button class="comprar">COMPRAR</button></div>
+            </div>
+        </div>
+
+        <div id="modal-compra" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Confirmação de Compra</h2>
+                <p class="confirma">Deseja confirmar a compra do produto?</p>
+                <button class="btn-confirmar">Confirmar</button>
+            </div>
+        </div>
+        
+        <div id="modal-agradecimento" class="modal">
+            <div class="modal-content">
+                <h2>Obrigado pela sua compra!</h2>
+                <p class="mensagem-agradecimento">Sua compra foi realizada com sucesso.</p>
+                <button class="btn-fechar">Fechar</button>
+            </div>
+        
+    </div>
+
+    </section>
+
+<main></main>
+    <footer>
+        Matheus Fellipe Turesso
+    </footer>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
